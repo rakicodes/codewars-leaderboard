@@ -1,0 +1,347 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "VT323", Arial, sans-serif;
+}
+
+table {
+  margin: 0;
+}
+
+img {
+  width: 32px;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+body {
+  display: flex;
+  flex-flow: row wrap;
+
+}
+
+.container {
+  flex: 1 100%;
+  width: 80%;
+}
+
+.content {
+  min-height: 70%;
+  max-height: 80%;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 2.5%;
+  margin: 0 10px 20px 10px;
+}
+
+h1 {
+  flex: 1 100%;
+  align-self: flex-end;
+}
+
+#leaderboard-container {
+  flex: 1 100%;
+  height: 60%;
+  width: 100%;
+  overflow: auto;
+}
+
+#leaderboard {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 5px 10px;
+}
+
+.user td {
+  padding: 10px;
+}
+
+td.rank {
+  width: 20px;
+  padding-right: 0;
+  text-align: right;
+}
+
+td.score {
+  text-align: left;
+  padding-left: 0;
+  width: 45px;
+
+}
+
+#searchResults {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  min-height: 15%;
+}
+
+#searchResults div {
+  display: flex;
+  align-items: center;
+  flex: 1 100%;
+}
+
+#searchResults .searchName {
+  padding-left: 20px;
+}
+
+.search {
+  display: flex;
+  flex-flow: row wrap;
+  max-height: 20%;
+  padding: 20px 10px 0 10px;
+}
+
+input {
+  margin-bottom: 1%;
+}
+
+button {
+  margin-left: 1%;
+  margin-bottom: 1%;
+}
+
+input {
+  padding: 10px;
+}
+
+.search-container {
+  flex: 1 100%;
+  display: flex;
+}
+
+#search-value {
+  flex: 4;
+}
+
+#button-search {
+  flex: 1;
+}
+
+td.td-image {
+  width: 16px;
+}
+
+.td-image img {
+  width: 16px;
+  padding-top: 5px;
+}
+
+.lds-container {
+  flex-flow: column nowrap;
+  align-items: center;  
+}
+
+.isLoading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content > p {
+  align-self: flex-end;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+.content {
+  background: rgb(143,203,143);
+  border-radius: 5px;
+  border: 1.5px solid rgb(29, 29, 29);
+  border-bottom: 3.5px solid rgb(29, 29, 29);
+}
+
+thead {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(78 118 78);
+  font-size: 1.4rem;
+}
+
+#leaderboard-container {
+  background: rgb(197, 234, 197);
+  border: 1px solid rgb(107, 157, 107);
+  border-bottom: 2.5px solid rgb(107, 157, 107);
+  border-radius: 10px;
+}
+
+#leaderboard {
+  border-spacing: 0 5px;
+}
+
+.user {
+  position: relative;
+  background: rgb(253 253 253);
+}
+
+.rank,
+.name,
+.score,
+.td-image {
+  border-top: 1px solid rgb(143,203,143);
+  border-bottom: 1px solid rgb(143,203,143);
+}
+
+.user:after {
+  content: " ";
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 1px;
+  border-bottom: 2.5px solid rgb(213, 213, 213);
+}
+
+.rank {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-left: 1px solid rgb(143,203,143);
+  color:  rgb(51, 111, 51);
+}
+
+.score {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-right: 1px solid rgb(143,203,143);
+}
+
+button {
+  cursor: pointer;
+  border: 1.5px solid rgb(29,29,29);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: rgba(133, 138, 133, 0.5);
+  border: 1.5px solid rgb(99, 98, 98);
+
+}
+
+.active {
+  background: rgb(143,203,143);
+  border: 1.5px solid rgb(127, 171, 127);
+}
+
+.active:hover {
+  background: rgba(108, 168, 108, 0.9);
+  border: 1.5px solid rgb(127, 171, 127);
+}
+
+input:focus {
+  outline-color: rgb(143,203,143);
+}
+
+.lds-container p {
+  color: rgb(243, 251, 243);
+  text-transform: lowercase;
+}
+
+.hidden {
+  display: none;
+}
+
+.loading {
+  display: flex;
+}
+
+.displayTable {
+  display: table;
+}
+
+.darken {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(25, 30, 24, 0.32);
+}
+
+.searchName {
+  font-size: 1.8rem;
+  color: rgb(40 45 38);
+}
+
+.searchRank,
+.searchScore {
+  font-size: 1.5rem;
+  color: rgb(40 45 38);
+}
+
+.content > p {
+  color: rgb(107 130 96);
+}
+
+/***********************************************************
+from https://codepen.io/ychnightder-the-bold/pen/XWKMXNe
+************************************************************/
+.progress{
+  position: relative;
+  height: 10px;
+  width: 100%;
+  border-radius: 15px;
+  background-color: #ffffff5a;
+}
+.progress .color{
+  position: absolute;
+  background-color: #ffffff;
+  width: 0px;
+  height: 10px;
+  bottom: 0;
+  border-radius: 15px;
+  animation: progres 300s 1 linear;   
+  animation-fill-mode: forwards; 
+}
+
+@keyframes progres{
+  0%{
+    width: 0%;
+  }
+  25%{
+      width: 50%;
+  }
+  50%{
+      width: 75%;
+  }
+  75%{
+      width: 85%;
+  }
+  100%{
+      width: 95%;
+  }
+};

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  	<meta charset="utf-8">
+  	<meta name="description" content="Your description goes here">
+  	<meta name="keywords" content="one, two, three">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>100Devs Codewars Leaderboard</title>
+
+		<!-- external CSS link -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div id="loadingBlock" class="darken"></div>
+		<section class="container search">
+			<section class="search-container">
+				<input id="search-value" type="text" placeholder="Search name">
+				<button id="button-search" type="submit">Enter</button>
+			</section>
+			<span>Sort by:</span>
+			<button id="button-honor" class="active" type="button">Honor</button>
+			<button id="button-js" type="button">Javascript</button>	
+		</section>
+		<section class="container content">
+			
+			<section id="searchResults">
+				<div>
+					<img src="./images/user.png" alt="user logo">
+					<span class="searchName">---</span>
+				</div>
+				<img src="./images/trophy.png" alt="trophy logo">
+				<span class="searchRank">---</span>
+				<img id="result-image" src="./images/swords.png" alt="points logo">
+				<span class="searchScore">---</span>
+			</section>
+
+			<h1>Codewars Leaderboard</h1>
+			<section id="leaderboard-container" class="isLoading">
+				<section class="lds-container loading">
+					<div class="progress">
+						<div class="color"></div>
+					</div>
+					<p>May take a minute or two</p>
+				</section>
+				<table id="leaderboard" class="hidden">
+					<tbody>
+						<thead>
+							<tr>
+								<th>Rank</th>
+								<th>Name</th>
+								<th>Points</th>
+							</tr>
+						</thead>
+					</tbody>
+				</table>
+			</section>
+			<p>#100Devs - leonnoel.com/twitch</p>
+		</section>
+
+		<script type="module" src="js/main.js"></script>
+		<script type="module" src="js/leonClan.js"></script>
+	</body>
+</html>
