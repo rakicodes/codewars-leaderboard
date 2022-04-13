@@ -113,7 +113,7 @@ function MakeLeaderboard(users) {
         document.querySelector('#loadingBlock').classList.remove('darken');
     }
 
-
+    
 }
 
 async function createLeaderboard() {
@@ -126,21 +126,23 @@ async function createLeaderboard() {
     leaderboard.sortByHonor();
     leaderboard.displayUsers();
 
-    document.querySelector('#button-search').addEventListener('click', leaderboard.searchName);
     document.querySelector('#button-honor').addEventListener('click', leaderboard.sortUsers);
     document.querySelector('#button-js').addEventListener('click', leaderboard.sortUsers);
 
-
+    
+    document.querySelector('#button-search').addEventListener('click', leaderboard.searchName);
 
 }
 
-async function getUsers() {
+async function getUsers(start=0, end=50) {
     let devs = [];
 
-    for (let i=0; i<hundredDevs.length; i++) {
-        await fetch(`https://www.codewars.com/api/v1/users/${hundredDevs[i].user}`)
-        .then(res => res.json())
-        .then(data => devs.push(data))
+    for (let i=start; i<hundredDevs.length; i++) {
+        const request = await fetch(`https://www.codewars.com/api/v1/users/${hundredDevs[i].user}`)
+        if (request.status === 200) {
+            const response = await request.json();
+            devs.push(response);
+        }
     }
 
     return devs;
