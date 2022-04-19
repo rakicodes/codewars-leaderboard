@@ -333,13 +333,13 @@ from https://codepen.io/ychnightder-the-bold/pen/XWKMXNe
     width: 0%;
   }
   25%{
-      width: 50%;
+      width: 20%;
   }
   50%{
-      width: 75%;
+      width: 50%;
   }
   75%{
-      width: 85%;
+      width: 75%;
   }
   100%{
       width: 95%;
