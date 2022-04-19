@@ -324,7 +324,7 @@ from https://codepen.io/ychnightder-the-bold/pen/XWKMXNe
   height: 10px;
   bottom: 0;
   border-radius: 15px;
-  animation: progres 300s 1 linear;   
+  animation: progres 5s 1 linear;   
   animation-fill-mode: forwards; 
 }
 

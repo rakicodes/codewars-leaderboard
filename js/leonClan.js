@@ -3352,13 +3352,9 @@ for (let i=0; i<clan.length; i++) {
     delete clan[i]["2 kyuShawnCharles.Com"];
 
     // remove n kyu from user name and format space
-    clan[i]["user"] = clan[i]["user"].split(" ").slice(1).join('%20').replace("kyu", "");
-    // format forward slash
-    clan[i]["user"] = clan[i]["user"].split("/").slice(1).join('%2F');
-    
+    clan[i]["user"] = clan[i]["user"].split(" ").slice(1).join('%20').replace("kyu", "");    
 }
 
-//console.log(clan);
 
 
 export let hundredDevs = [
@@ -3412,9 +3408,6 @@ export let hundredDevs = [
     },
     {
         "user": "fierydrake"
-    },
-    {
-        "user": "bugaboo"
     },
     {
         "user": "bomboloni"
@@ -4413,9 +4406,6 @@ export let hundredDevs = [
         "user": "jamisonm"
     },
     {
-        "user": "stormym"
-    },
-    {
         "user": "Lexingame"
     },
     {
@@ -4525,9 +4515,6 @@ export let hundredDevs = [
     },
     {
         "user": "penpenshinigami"
-    },
-    {
-        "user": "ymbaixa"
     },
     {
         "user": "CMCmike"
@@ -4998,9 +4985,6 @@ export let hundredDevs = [
         "user": "KingChav"
     },
     {
-        "user": "leesvntos"
-    },
-    {
         "user": "thatkidneptune"
     },
     {
@@ -5368,3 +5352,25 @@ export let hundredDevs = [
 ]
 
 
+/*
+
+{
+    [
+        {
+            user: name,
+            honor: 100,
+            js: 100,
+            currRank: 1,
+            prevRank: 5,
+        },
+        {
+            user: name,
+            honor: 100,
+            js: 100,
+            currRank: 1,
+            prevRank: 5,
+        },
+    ]
+}
+
+*/
