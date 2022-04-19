@@ -5348,5 +5348,17 @@ export let hundredDevs = [
     },
     {   "user": "Yuvraj-50" 
     },
+    {   "user": "michaeljoelt" 
+    },
+    {   "user": "kmal808" 
+    },
+    {   "user": "Hatricia" 
+    },
+    {   "user": "RenaePeppers" 
+    },
+    {   "user": "geocall" 
+    },
+    {   "user": "doremisofafa"     
+    },
 
 ]
