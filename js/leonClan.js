@@ -4256,9 +4256,6 @@ export let hundredDevs = [
         "user": "cperez-dev"
     },
     {
-        "user": "ReillyG"
-    },
-    {
         "user": "Hachikoi-the-creator"
     },
     {
@@ -5350,27 +5347,3 @@ export let hundredDevs = [
     {   "user": "rakicodes" 
     }
 ]
-
-
-/*
-
-{
-    [
-        {
-            user: name,
-            honor: 100,
-            js: 100,
-            currRank: 1,
-            prevRank: 5,
-        },
-        {
-            user: name,
-            honor: 100,
-            js: 100,
-            currRank: 1,
-            prevRank: 5,
-        },
-    ]
-}
-
-*/
