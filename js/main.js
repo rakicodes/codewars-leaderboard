@@ -89,23 +89,33 @@ function MakeLeaderboard(hundredDevs) {
          }
     }
 
-    this.searchName = function(e) {
+    this.searchName = async function(e) {
         let name = document.querySelector('#search-value').value;
         document.querySelector('#search-value').value = "";
         let index = this.sortBy === 'honor' ? this.users.findIndex(user => user.username === name) : this.jsUsers.findIndex(user => user.username === name);
 
         if (index === -1) {
-            document.querySelector('.searchName').innerText = 'No users found.';
-            document.querySelector('.searchRank').innerText = '---';
-            document.querySelector('.searchScore').innerText = '---';
+            if (await this.getNonsavedUSer(name) === -1) {
+                document.querySelector('.searchName').innerText = 'No users found.';
+                document.querySelector('.searchRank').innerText = '---';
+                document.querySelector('.searchScore').innerText = '---';
+            } else {
+                index = this.sortBy === 'honor' ? this.users.findIndex(user => user.username === name) : this.jsUsers.findIndex(user => user.username === name);
+                this.displaySearchResults(index);
+            }
 
         } else {
-            document.querySelector('.searchName').innerText = this.sortBy === 'honor' ? this.users[index].username : this.jsUsers[index].username;
-            document.querySelector('.searchRank').innerText = index+1;
-            document.querySelector('.searchScore').innerText = this.sortBy === 'honor' ? this.users[index].honor : this.jsUsers[index].ranks.languages.javascript.score;
+            this.displaySearchResults(index);
         }
 
     }.bind(this);
+
+    this.displaySearchResults = function (index) {
+        document.querySelector('.searchName').innerText = this.sortBy === 'honor' ? this.users[index].username : this.jsUsers[index].username;
+        document.querySelector('.searchRank').innerText = index+1;
+        document.querySelector('.searchScore').innerText = this.sortBy === 'honor' ? this.users[index].honor : this.jsUsers[index].ranks.languages.javascript.score;
+
+    }
 
     this.displayLeaderBoard = function() {
         document.querySelector('.lds-container').classList.remove('loading');
@@ -125,6 +135,29 @@ function MakeLeaderboard(hundredDevs) {
     this.resetBoard = function() {
         document.querySelector('tbody').innerHTML = "";
     }
+
+    this.getNonsavedUSer = async function(name) {
+        const request = await fetch(`https://www.codewars.com/api/v1/users/${name}`);
+        const response = await request.json();
+
+        if (request.status === 200) {
+            this.users.push(response);
+            if ("javascript" in response.ranks.languages) {
+                this.jsUsers.push(response);
+            }
+        } else {
+            console.log("User not found");
+            return -1;
+        }
+
+        if (this.sortBy === 'honor') {
+            this.sortByHonor();
+        } else if (this.sortBy === 'js') {
+            this.sortByJS();
+        }
+        this.resetBoard();
+        this.displayUsers();
+    }.bind(this);
 
 }
 
