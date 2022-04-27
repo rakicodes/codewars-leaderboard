@@ -1638,9 +1638,6 @@ export let hundredDevs = [
         "user": "craebixby"
     },
     {
-        "user": "stephnicoledev"
-    },
-    {
         "user": "Pau-c"
     },
     {
@@ -2014,5 +2011,7 @@ export let hundredDevs = [
     {   "user": "Erick512",     
     },
     {   "user": "BrookeLeeK",     
+    },
+    {   "user": "Snake0",     
     },
 ]
