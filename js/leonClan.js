@@ -2049,9 +2049,6 @@ export let hundredDevs = [
         "user": "ijborda"
     },
     {
-        "user": "bugaboo &lt;rob r&gt;"
-    },
-    {
         "user": "kdin4400"
     },
     {
@@ -3007,9 +3004,6 @@ export let hundredDevs = [
     },
     {
         "user": "bornduringwar"
-    },
-    {
-        "user": "toshi5o3/SergioHolograms"
     },
     {
         "user": "detectivemac"
