@@ -960,9 +960,6 @@ export let hundredDevs = [
         "user": "LiuKang1080"
     },
     {
-        "user": "BBarricklow"
-    },
-    {
         "user": "Hygmod"
     },
     {
