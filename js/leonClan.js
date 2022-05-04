@@ -168,9 +168,6 @@ export let hundredDevs = [
         "user": "Waroach"
     },
     {
-        "user": "beproprobe"
-    },
-    {
         "user": "adeelbukhari"
     },
     {
@@ -847,9 +844,6 @@ export let hundredDevs = [
     },
     {
         "user": "ronaldconn"
-    },
-    {
-        "user": "zaku_dev"
     },
     {
         "user": "TonyHerbert22ATX"
@@ -1660,9 +1654,6 @@ export let hundredDevs = [
     },
     {
         "user": "codingcutie"
-    },
-    {
-        "user": "daniel.vroman@gmail.com"
     },
     {
         "user": "dagmar-dev"
