@@ -1170,9 +1170,6 @@ export let hundredDevs = [
         "user": "miraclebanks"
     },
     {
-        "user": "mrsrgn"
-    },
-    {
         "user": "two_dimes"
     },
     {
