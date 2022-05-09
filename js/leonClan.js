@@ -222,9 +222,6 @@ export let hundredDevs = [
         "user": "DnlGnz"
     },
     {
-        "user": "zilby"
-    },
-    {
         "user": "Regromae"
     },
     {
