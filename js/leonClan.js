@@ -36,9 +36,6 @@ export let hundredDevs = [
         "user": "nicole-gathany"
     },
     {
-        "user": "Arquimidio"
-    },
-    {
         "user": "shenando"
     },
     {
