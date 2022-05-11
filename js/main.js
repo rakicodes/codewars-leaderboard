@@ -43,11 +43,14 @@ function MakeLeaderboard(hundredDevs) {
         try {
             const data = await Promise.all(this.urls.map(url => fetch(url)));
             const ext = await Promise.all(data.map(res => res.json()));
+            
             for (let item of ext) {
-              this.users.push(item);
-              if ("javascript" in item.ranks.languages) {
-                this.jsUsers.push(item);
-              }
+              if (item?.username) {
+                this.users.push(item);
+                if ("javascript" in item.ranks.languages) {
+                    this.jsUsers.push(item);
+                } 
+              } 
             }
           } catch (err) {
             console.log(err);
@@ -83,7 +86,7 @@ function MakeLeaderboard(hundredDevs) {
         tbody.appendChild(tr);
     }
 
-    this.displayUsers =  function(length = hundredDevs.length) {
+    this.displayUsers =  function(length = this.users.length) {
         for (let i=0; i<length; i++) {
             this.displayUser(i);
          }
